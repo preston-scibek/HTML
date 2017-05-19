@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  
+ 
+  var position = 0;
+  var play2;
+
+function play1() {play2 = setInterval(play, 50);}
+function reverse() {reverse2 = setInterval(reverse3, 50);}
+ function play(){
+     
+     if (position == 31){
+	    position  = 0;
+     document.getElementById("stopmotion").src = "images/frame_" + position + ".gif";
+     }
+     else{
+     document.getElementById("stopmotion").src = "images/frame_" + position + ".gif";
+     }
+     position++;
+
+  };
+   function reverse3(){
+     
+     if (position == 0){
+	    position  = 31;
+     document.getElementById("stopmotion").src = "images/frame_" + position + ".gif";
+     }
+     else{
+     document.getElementById("stopmotion").src = "images/frame_" + position + ".gif";
+     }
+     position--;
+
+  };
+  function stoop2() {
+  clearInterval(play2);
+  clearInterval(reverse2);
+  }
+  </script>
+  <style>
+ .centeredimage {
+ display: block;
+ margin-left: auto;
+     margin-right: auto;
+	 width: 50%;
+     }
+</style>
+</head>
+<body>
+  <div class="centeredimage">
+  <img id="stopmotion" src="images/frame_0.gif" width="500" height="500" >
+ 
+  <button id="playbutton" onclick="play1()">Play</button>
+  <button id="stopbutton" onclick="stoop2()">Stop</button>  
+  <button id="reversebutton" onclick="reverse()">Reverse</button> </div>
+  
+</body>
+</html>

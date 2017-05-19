@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>PIGLATIN</title>
+<script>
+  function whitespace(letter){
+	  if (letter==" " || letter=="-" || letter=="." || letter == "!" || letter=="?" || letter == "," || letter=="\t" || letter=="\n"){
+		  return true;
+	  }
+	  else{
+	    return false;
+	  }
+  }
+  function vowel(letter) {
+  if (letter=="e" || letter=="a" || letter=="i" || letter=="o" || letter=="u"){
+  return true;}
+  
+  else {
+  return false;}}
+  function translate1(){ 
+     var usertext = document.getElementById("input").value;
+     var newText = "";
+     var i;
+     var inAWord = false;
+     var firstLetter = "";
+	 var isitvowel = false;
+
+	
+     for (i = 0; i < usertext.length; i++){
+	 var letter = usertext[i];
+	 if (whitespace(letter)){
+		 if (inAWord){
+	
+			 newText += firstLetter + "ay";
+			 inAWord = false;
+		 }
+                 newText += letter;
+	 }
+	 else{
+	    if(inAWord){
+		    newText += letter;
+	    }
+	    else{
+		if (vowel(letter)) {
+		isitvowel = true;
+		firstLetter = "w";
+		newText += letter;
+		inAWord = true;
+		}
+	else {
+		firstLetter = letter;
+	       inAWord = true;
+		}}}
+	       
+	 
+     }
+     if (inAWord){
+	     newText += firstLetter + "ay";
+     }
+     document.getElementById("output").value = newText;
+  } 
+</script>
+</head>
+<body>
+<h1> PIGLATINIFY STUFF </h1>
+  <textarea id="input" rows="10" cols="10" placeholder="egg and pizza becomes"></textarea>
+
+  <button onclick="translate1()" >Convert</button>
+
+  <textarea id="output" rows="10" cols="10" placeholder="eggway andway izzapay ecomesbay"></textarea>
+  <p> Piglatin works by taking words \nthat start with vowels (a,e,i,o,u) and adding way to the end of it. Piglatin takes words starting with consonants and takes the first letter and puts it at the end of the word with ay.
+</body>
+</html>
+<!--
+substring returns the text in a string between two specified points not including the end pointer
+A for loop continues to do its code until the loop ends for loops have a variable that is defined a condition for the variable and then a counter ex. for (i=0, i<10 i++) wil run the code 10 times until i becomes = to 10 upon which it stops
+a while loop runs the code while something is true ex while (i < 5) runs as long as the variable i is less than 5
+tabs and new lines are represented by \t and \n in javascript strings
+\n jumps to a new line but \r\n jumps to a new line and places the cursor at the beginning of the new line
+Pig latin and english are not one to one. Both itch and witch become itchway
+-->

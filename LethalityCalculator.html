@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Lethality Calculaor</title>
+<script>
+function calculate() {
+var lethality = document.getElementById("lethality").value;
+var enemyLevel = document.getElementById("enemyLevel").value;
+
+var flatArmorPen = Number(lethality) * (0.6 + 0.4 * Number(enemyLevel) / 18)
+
+document.getElementById("flatArmorPen").innerHTML = "Your flat armor pen is " + String(flatArmorPen);
+}
+
+function clear2() {
+document.getElementById("lethality").value= 0;
+document.getElementById("enemyLevel").value= 0;
+document.getElementById("flatArmorPen").innerHTML= 0;
+}
+</script>
+</head>
+<body>
+<p>Your Lethality Value</p><input type="text" id="lethality" value=0> </input>
+<p>Enemy Level</p><input type="text" id="enemyLevel" value=0> </input>
+<button type="button" id="calculate" onclick="calculate()">Calculate</button>
+<button type="button" id="clear" onclick="clear2()">clear </button>
+<h1 > Simple Tool To Calculate Flat Armor Pen Given Lethality and Enemy Level </h1>
+<h1 id="flatArmorPen"></h1>
+</body>
+</html>

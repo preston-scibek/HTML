@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> BOOKREVIEW </title>
+<script>
+var booksInfo = [
+{title:"Adventures of Huckleberry Finn", rating:"Thumbs Up", description:"Adventures of Huckleberry Finn is about a young boy who runs away from home. He runs away from home with a slave named Jim who Huck regards as a friend. Huck gets into much trouble on his journey and winds up meeting new and old friends.", url:"http://www.gutenberg.org/files/76/76-h/76-h.htm"},
+{title:"Frankenstein; Or, The Modern Prometheus", rating:"Thumbs Up", description:"A man named Victor Frankenstein his childhood to a man on a boat. He then describes going to school and building a creature out of human parts. The monster he creates kills his brother. Victor then hides in the mountains where the monster convincesh im to build him a mate. Victor destroys the mate one night and is haunted by the monster. The monster kills Victors bride.", url:"http://www.gutenberg.org/files/84/84-h/84-h.htm"},
+{title:"The Adventures of Sherlock Holmes", rating:"Thumbs Up", description:"Tales of a detective and his sidekick Watson. They solve many mysteries in England.", url:"http://www.gutenberg.org/files/1661/1661-h/1661-h.htm"},
+{title:"The Adventures of Tom Sawyer", rating:"Thumbs Up", description:"The adventures of a young boy and his gang of friends. They get into much trouble and find treasure. ", url:"http://www.gutenberg.org/files/74/74-h/74-h.htm"}
+];
+function generateBookInfoLinks(){
+    var i;
+    for (i=0; i < booksInfo.length; i++) {
+	var bookInfo = booksInfo[i];
+	var button1 = document.createElement("BUTTON");        
+    var title1 = document.createTextNode(bookInfo.title);       
+    button1.appendChild(title1);                                
+    document.body.appendChild(button1);
+	button1.onclick = clicker(bookInfo);
+	function clicker(bookInfo){
+		return function(){showBookInfo(bookInfo)};
+	}
+	}
+}
+
+function showBookInfo(bookInfo){
+    document.getElementById("title").innerHTML = bookInfo.title;
+    document.getElementById("rating").innerHTML = bookInfo.rating;
+    document.getElementById("description").innerHTML = bookInfo.description;
+    document.getElementById("read").href = bookInfo.url;
+	document.getElementById("read").innerHTML = bookInfo.url;
+}
+</script>
+</head>
+<body onload="generateBookInfoLinks()">
+<div id="menubar"> </div>
+<div id="bookinfo"> <h1 id="title"></h1> <span id="rating"></span> <p id="description"></p> <a id="read" href=""></a></div>
+</body>
+</html>
+<!--
+you can create an object through an object literal ex var person = {name:"joe", age:"10"}
+the name:value pairs in objects are properties access through objectName.propertyName or objectName[propertyName] properties are defined in creation of object
+object based programming is programming based on objects in the forms of fields and procedures
+one might use object if were talking about people and descripting factors
+onload event occurs as the page is loading
+\n creates a new line in a javascript string upon display
+use document.createElement and then append it to the body 
+document.createElement creates a new html element
+public domain things are available to the public as a whole
+Project Gutenberg is a volunteer effort to digitize and archive cultural works in the form of ebooks
+google books searches the database of scanned media to search the text for the search
+
+-->

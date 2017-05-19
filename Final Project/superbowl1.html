@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>First Super Bowl</title>
+<link rel="stylesheet" type="text/css" href="styling.css">
+<script src="menubar.js"></script>
+<script>
+var i = 0;
+var k = 0;
+var player = [
+    "Defensive end Rob Burnett had 10.5 sacks.",
+    "Rookie running back Jamal Lewis rushed for 1,364 yards.",
+    "Ray Lewis returned an interception 50 yards for a touchdown to put the" +
+    " playoff game against the Titans away.",
+    "Anthony Mitchell returned a blocked field goal 90 yards for the touch" +
+    "down in the playoff game against the Titans.",
+    "Duane Starks returned an interception 49 yards in the Super Bowl to " +
+    "put the Ravens up 17-0.",
+    "Jamie Sharper had 5 forced fumbles during the season.",
+    "Chris McAlister had 4 interceptions all season.",
+    "Peter Boulware had 7 sacks during the season.",
+    "Duane Starks had 6 interceptions all season.",
+    "Ray Lewis had 107 tackles.",
+    "Chris McAlister had a 98 yard interception return for a touchdown in " +
+    "the week 17 game against the Jets.",
+    "Ray Lewis had 30 tackle assists."
+];
+var team = [
+    "Defense allowed 165 points which is the fewest in a 16 game season.",
+    "Defense allowed 970 yards rushing, a NFL record for a 16 game season.",
+    "Baltimore only allowed 5 rushing touchdowns all season, a league best.",
+    "Baltimore only allowed 2.7 yards per season, a league best.",
+    "Baltmore recovered 26 fumbles, double the total of the second ranked" +
+	" team",
+    "Baltimore had 23 interceptions as a team.",
+    "Baltimore had 6 turnovers in a game twice, against Jacksonville," +
+    " and the New York Jets.",
+    "Baltimore had 5 turnovers in a game 3 times, against the Giants, the " +
+    "Raiders, and the Chargers."
+];
+function statsTeam() {
+	window.alert(team[i]);
+	i++;
+}
+function statsPlayer() {
+	window.alert(player[k]);
+	k++;
+}
+</script>
+<style>
+#stats {
+    margin-left: 000px;
+	position: absolute;
+    right: 0px;
+    width: 100px;
+	line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:right;
+    padding:5px;
+}
+</style>
+</head>
+<body onload="generateMenuBar()">
+<div id="header">
+<h1>The First Super Bowl</h1>
+</div>
+<div id="menuBar"></div>
+<div id="stats">
+<button onclick="statsTeam()">Random Team Stat</button>
+<button onclick="statsPlayer()">Random Player Stat</button>
+</div>
+<p>The 2000 season for the Baltimore Ravens was a very special one. The Ravens head coach was Brian Billick. The Ravens finished second in the AFC Central with a 12-4-0 record. The defense of the 2000 season is considered the greatest defense of all time. The Ravens won their first Super Bowl, thanks to a defense headlined by <a href="lewisray.html">Ray Lewis</a> who many thought would not play after a controversial offseason. The defense did not allowed a score all game during the Super Bowl. The only score for the New York Giants came on a kickoff return.</p>
+<img src="http://www.sportsecyclopedia.com/nfl/baltrav/2000Ravens.jpg" height="200" width="675" alt="teamphoto">
+<table>
+<tr>
+<th>Week</th>
+<th>Opponent</th>
+<th>Score</th>
+<th>Record</th>
+<th>Location</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Pittsburgh Steelers</td>
+<td>16-0</td>
+<td>1-0-0</td>
+<td>Three Rivers Stadium</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Jacksonville Jaguars</td>
+<td>39-36</td>
+<td>2-0-0</td>
+<td>M&amp;T Bank Stadium</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Miami Dolphins</td>
+<td>6-19</td>
+<td>2-1-0</td>
+<td>Pro Player Stadium</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Cincinnati Bengals</td>
+<td>37-0</td>
+<td>3-1-0</td>
+<td>M&amp;T Bank Stadium</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Cleveland Browns</td>
+<td>12-0</td>
+<td>4-1-0</td>
+<td>Cleveland Browns Stadium</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Jacksonville Jaguars</td>
+<td>15-10</td>
+<td>5-1-0</td>
+<td>ALLTEL Stadium</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Washington Redskins</td>
+<td>3-10</td>
+<td>5-2-0</td>
+<td>FedEx Field</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Tennessee Titans</td>
+<td>6-14</td>
+<td>5-3-0</td>
+<td>M&amp;T Bank Stadium</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Pittsburgh Steelers</td>
+<td>6-9</td>
+<td>5-4-0</td>
+<td>M&amp;T Bank Stadium</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Cincinnati Bengals</td>
+<td>27-7</td>
+<td>6-4-0</td>
+<td>Paul Brown Stadium</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Tennessee Titans</td>
+<td>24-23</td>
+<td>7-4-0</td>
+<td>Adelphia Coliseum</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Dallas Cowboys</td>
+<td>27-0</td>
+<td>8-4-0</td>
+<td>M&amp;T Bank Stadium</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Cleveland Browns</td>
+<td>44-7</td>
+<td>8-4-0</td>
+<td>M&amp;T Bank Stadium</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Bye</td>
+<td>Bye</td>
+<td>8-4-0</td>
+<td>Bye</td>
+</tr>
+<tr>
+<td>15</td>
+<td>San Diego Chargers</td>
+<td>24-3</td>
+<td>10-4-0</td>
+<td>M&amp;T Bank Stadium</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Arizona Cardinals</td>
+<td>13-7</td>
+<td>11-4-0</td>
+<td>Sun Devil Stadium</td>
+</tr>
+<tr>
+<td>17</td>
+<td>New York Jets</td>
+<td>34-20</td>
+<td>12-4-0</td>
+<td>M&amp;T Bank Stadium</td>
+</tr>
+<tr>
+<td>Wild Card</td>
+<td>Denver Broncos</td>
+<td>21-3</td>
+<td>13-4-0(1-0)</td>
+<td>M&amp;T Bank Stadium</td>
+</tr>
+<tr>
+<td>Divisonal</td>
+<td>Tennessee</td>
+<td>24-10</td>
+<td>14-4-0(2-0)</td>
+<td>Adelphia Coliseum</td>
+</tr>
+<tr>
+<td>AFC Championship</td>
+<td>Oakland Raiders</td>
+<td>16-3</td>
+<td>15-4-0(3-0)</td>
+<td>Network Associates Coliseum</td>
+</tr>
+<tr>
+<td>Super Bowl XXXV</td>
+<td>New York Giants</td>
+<td>34-7</td>
+<td>16-4-0(4-0)</td>
+<td>Raymond James Stadium</td>
+</tr>
+</table>
+</body>
+</html>

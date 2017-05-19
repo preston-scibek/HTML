@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Second Super Bowl</title>
+<link rel="stylesheet" type="text/css" href="styling.css">
+<style>
+#stats {
+    margin-left: 000px;
+	position: absolute;
+    right: 0px;
+    width: 100px;
+	line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:right;
+    padding:5px;
+</style>
+<script src="menubar.js">
+</script>
+<script>
+var i = 0;
+var k = 0;
+var player = [
+    "Joe Flacco had 3,817 passing yards.",
+    "Ray Rice had 1,143 rushing yards,",
+    "Anquan Boldin had 921 receiving yards.",
+    "Joe Flacco had 22 passing touchdowns.",
+    "Ray Rice had 9 rushing touchdowns.",
+    "Torrey Smith had 8 receiving touchdowns.",
+    "Jacoby Jones had 1,167 kickoff return yards.",
+    "Bernard Pollard had 98 tackles.",
+    "Paul Kruger had 9.0 sacks.",
+    "Cary Williams had 4 interceptions.",
+    "Ed Reed had 4 interceptions.",
+    "Jacoby Jones had 1 punt return touchdown and 2 kickoff return touchdowns."
+];
+var team = [
+    "The Ravens had 13 interceptions.",
+    "The Ravens forced 10 fumbles.",
+    "The Ravens had 37 sacks.",
+    "The Ravens scored 398 points as an team.",
+    "The Ravens averaged 24.9 points per game.",
+    "The Ravens allowed 344 points as a team.",
+    "The Ravens allowed an average of 21.5 points per game.",
+    "The Ravens reached the playoffs for the fifth straight year.",
+    "The Ravens reached the AFC Championship Game for the second straight" +
+	" year.",
+    "The Ravens won consecutive division titles for the first time in hist" +
+	"ory.",
+    "The Ravens had three overtime games."
+];
+function statsTeam() {
+	window.alert(team[i]);
+	i++;
+}
+function statsPlayer() {
+	window.alert(player[k]);
+	k++;
+}
+</script>
+<script>
+var miracle1 = "The Mile High Miracle is the AFC Divisonal Playoff Game wher" +
+    "e the Ravens beat the Denver Broncos in a thriller. Denver was the " + 
+    "favorite by 9.5 points. Both teams had matching quarterly scores th" +
+    "roughout the first 4 quarters. The Ravens were down by a touchdown " +
+    "with a minute left in the game. A botched coverage by the Broncos a" +
+    "llowed Flacco to throw deep to Jacoby Jones for the game tying 70 y" +
+    "ard touchdown pass. The first three drives of overtime led to punts" +
+    ". Then Corey Graham intercepted Peyton Manning for the second time." +
+    " A few plays later Justin Tucker kicked the game winning 47 yard fi" +
+    "eld goal. The game was ranked as the #1 NFL game of 2012. The game " +
+    "was described as a contest that had everything: two special teams t" +
+	"ouchdowns, two deep touchdown passes, and a pick six.";
+var zilch1 = " ";
+function zilch2() {
+    document.getElementById("miracle3").innerHTML = zilch1;
+    document.getElementById("miracleButton").onclick = miracle2;
+	document.getElementById("miracleButton").innerHTML = "Mile High" +
+	" Miracle info";
+}
+function miracle2() {
+    document.getElementById("miracle3").innerHTML = miracle1;
+    document.getElementById("miracleButton").onclick = zilch2;
+	document.getElementById("miracleButton").innerHTML = "Remove Info";
+}
+</script>
+<script>
+var super1 = "If the Ravens got to the Super Bowl via a miracle, it would be" +
+    " only fitting that they would win the Super Bowl because of a failed mi" +
+    "racle. Super Bowl XLVII was held in the Mercedes-Benz Superdome in New " +
+    "Orleans. The San Francisco 49ers coached by John Harbaugh's brother, Ji" +
+    "m Harbaugh, were the 4 point favorites. It was the first Super Bowl whe" +
+    "re the head coaches were siblings. The 49ers punted on their first poss" +
+    "ession after an illegal formation penalty while the Ravens scored on a " +
+    "pass to Anquan Boldin on their first possession. On their second posses" +
+    "sion the 49ers kicked a field goal. The Ravens punted on their second p" +
+    "ossession. After a Courtney Upshaw forced fumble, the Ravens drove 75 y" +
+    "ards and scored on a pass to Dennis Pitta. Ed Reed then intercepted the" +
+    " 49ers but the Ravens were unable to score after a failed fake field go" +
+    "al. The 49ers then punted and the Ravens scored on a Jacoby Jones 56 ya" +
+    "rd touchdown catch. On the last play of the half the 49ers kicked a fie" +
+    "ld goal to make it 21-6. Jones returned the second half kickoff 108 yar" +
+    "ds for the longest play in Super Bowl history. The power then cut out o" +
+    "n the 49ers next drive. Play was suspended for 34 minutes. Many fans be" +
+    "lieved and some still do believe it was a conspiracy to kill the Ravens" +
+    " momentum in hopes of a 49ers come back. After play resumed both teams " +
+    "punted, the 49ers then scored, the Ravens punted, and the 49ers scored " +
+    "again. The 49ers then intercepted the Ravens and kicked a field goal to" +
+    " make it 28-23. The Ravens then kicked a field goal and the 49ers respo" +
+	"nded with a 15 yard touchdown run by Colin Kaepernick the longest in Su" +
+    "per Bowl history by a quarterback. The two point conversion failed leav" +
+    "ing it 31-29. The Ravens then kicked a field goal to make it 34-29. The" +
+    " 49ers then got within 5 yards of the end zone but failed in 4 chances." +
+    " The Ravens then ran the clock down to 12 seconds and then took a safet" +
+	"y to end the game.";
+var zilch11 = " ";
+function zilch22() {
+    document.getElementById("super3").innerHTML = zilch11;
+    document.getElementById("superButton").onclick = super2;
+    document.getElementById("superButton").innerHTML = "Super Bowl XLVII info";
+}
+function super2() {
+    document.getElementById("super3").innerHTML = super1;
+    document.getElementById("superButton").onclick = zilch22;
+    document.getElementById("superButton").innerHTML = "Remove Info";
+}
+</script>
+</head>
+<body onload="generateMenuBar()">
+<div id="header"><h1>The Second Super Bowl</h1></div>
+<div id="menuBar"></div>
+<div id="stats">
+<button onclick="statsTeam()">Random Team Stat</button>
+<button onclick="statsPlayer()">Random Player Stat</button>
+</div>
+<p>The 2012 season for the Baltimore Ravens was a very special one. The Ravens head coach was John Harbaugh. The Ravens finished first in the AFC North with a 10-6-0 record. The Ravens offense had just as much impact as the Ravens defense in winning the Super Bowl. The Ravens won their second Super Bowl, thanks to a defense headlined by <a href="lewisray.html">Ray Lewis</a> who many thought would not play after an injury to his triceps, and thanks to an offense headlined by Super Bowl MVP Joe Flacco.</p>
+<img src="http://www.sportsecyclopedia.com/nfl/baltrav/2012Ravens.jpg" height="200" width="675" alt="teamphoto">
+<button onclick="miracle2()" id="miracleButton">Mile High Miracle info</button>
+<p style="font-size:2em">Mile High Miracle:</p><p id="miracle3"></p><iframe width="560" height="315" src="https://www.youtube.com/embed/bH6O5vAN3MQ" frameborder="0" allowfullscreen></iframe>
+<button onclick="super2()" id="superButton">Super Bowl XLVII info</button>
+<p style="font-size:2em">Super Bowl XLVII:</p><p id="super3"></p>
+<table>
+<tr>
+<th>Week</th>
+<th>Opponent</th>
+<th>Score</th>
+<th>Record</th>
+<th>Location</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Cincinnati Bengals</td>
+<td>44-13</td>
+<td>1-0-0</td>
+<td>M&amp;T Bank Stadium</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Philadelphia Eagles</td>
+<td>23-24</td>
+<td>1-1-0</td>
+<td>Lincoln Financial Field</td>
+</tr>
+<tr>
+<td>3</td>
+<td>New England Patriots</td>
+<td>31-30</td>
+<td>2-1-0</td>
+<td>M&amp;T Bank Stadium</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Cleveland Browns</td>
+<td>23-16</td>
+<td>3-1-0</td>
+<td>M&amp;T Bank Stadium</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Kansas City Chiefs</td>
+<td>9-6</td>
+<td>4-1-0</td>
+<td>Arrowhead Stadium</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Dallas Cowboys</td>
+<td>31-29</td>
+<td>5-1-0</td>
+<td>M&amp;T Bank Stadium</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Houston Texans</td>
+<td>13-43</td>
+<td>5-2-0</td>
+<td>Reliant Stadium</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Bye</td>
+<td>Bye</td>
+<td>5-2-0</td>
+<td>Bye</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Cleveland Browns</td>
+<td>25-15</td>
+<td>6-2-0</td>
+<td>Cleveland Browns Stadium</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Oakland Raiders</td>
+<td>55-20</td>
+<td>7-2-0</td>
+<td>M&amp;T Bank Stadium</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Pittsburgh Steelers</td>
+<td>13-10</td>
+<td>8-2-0</td>
+<td>Heinz Field</td>
+</tr>
+<tr>
+<td>12</td>
+<td>San Diego Chargers</td>
+<td>16-13(OT)</td>
+<td>9-2-0</td>
+<td>Qualcomm Stadium</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Pittsburgh Steelers</td>
+<td>20-23</td>
+<td>9-3-0</td>
+<td>M&amp;T Bank Stadium</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Washington Redskins</td>
+<td>28-31(OT)</td>
+<td>9-4-0</td>
+<td>FedExField</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Denver Broncos</td>
+<td>17-34</td>
+<td>9-5-0</td>
+<td>M&amp;T Bank Stadium</td>
+</tr>
+<tr>
+<td>16</td>
+<td>New York Giants</td>
+<td>33-14</td>
+<td>10-5-0</td>
+<td>M&amp;T Bank Stadium</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Cincinnati Bengals</td>
+<td>17-23</td>
+<td>10-6-0</td>
+<td>Paul Brown Stadium</td>
+</tr>
+<tr>
+<td>Wild Card</td>
+<td>Indianapolis Colts</td>
+<td>24-9</td>
+<td>11-6-0(1-0)</td>
+<td>M&amp;T Bank Stadium</td>
+</tr>
+<tr>
+<td>Divisonal</td>
+<td>Denver Broncos</td>
+<td>38-35(2OT)</td>
+<td>12-6-0(2-0)</td>
+<td>Sports Authority Field at Mile High</td>
+</tr>
+<tr>
+<td>AFC Championship</td>
+<td>New England Patriots</td>
+<td>28-13</td>
+<td>13-6-0(3-0)</td>
+<td>Gillette Stadium</td>
+</tr>
+<tr>
+<td>Super Bowl XLVII</td>
+<td>San Francisco 49ers</td>
+<td>34-31</td>
+<td>14-6-0(4-0)</td>
+<td>Mercedes-Benz Superdome</td>
+</tr>
+</table>
+</body>
+</html>

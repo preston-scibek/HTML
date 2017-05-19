@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> SLIDESHOW </title>
+<script>
+var slides = ["http://www.comfortretrievers.com/wp-content/uploads/2011/04/miniature-golden-retriever-puppies-for-sale01.jpg", "http://sittersforcritters.com/wp-content/uploads/2015/02/grp-sitters4critters.jpg", "http://reliabletexaspower.com/wp-content/uploads/2014/12/golden-retriever.jpeg", "http://mydoghome.com/wp-content/uploads/2014/05/golden-retriever-information-names.jpg"] ;
+var position = 0;
+
+function next() {
+if (position == slides.length) {
+position = 0; 
+document.getElementById("slideshow").src = slides[position];}
+else {
+document.getElementById("slideshow").src = slides[position];}
+position++;
+}
+function back() {
+if (position == 0) {
+position = 3; 
+document.getElementById("slideshow").src = slides[position];}
+else {
+document.getElementById("slideshow").src = slides[position];}
+position--;
+}
+</script>
+<style>
+ .centeredimage {
+ display: block;
+ margin-left: auto;
+     margin-right: auto;
+	 width: 50%;
+     }
+</style>
+</head>
+<body>
+<div class="centeredimage">
+<img alt="slideshow" id="slideshow" src="http://www.comfortretrievers.com/wp-content/uploads/2011/04/miniature-golden-retriever-puppies-for-sale01.jpg" width="500" length="500">
+</div>
+<button onclick="next()">NEXT</button>
+<button onclick="back()">BACK</button>
+</body>
+</html>
+<!--
+arrays are used to store multiple values in a single variable
+access an element in a array by using the index number and get length by using arrayname.length
+setTimeout calls a function or evaluates an expression after a specified number of milliseconds.
+setInterval calls a function or evaluates an expression at specified intervals
+clearInterval clears the timer set in setInterval
+-->

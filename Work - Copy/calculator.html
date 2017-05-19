@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CALCULATOR </title>
+<script>
+function add() {
+var op1 = document.getElementById("box1").value;
+var op2 = document.getElementById("box2").value;
+var numop1 = Number(op1);
+var numop2 = Number(op2);
+
+var total1 = numop1 + numop2;
+document.getElementById("total").innerHTML=total1;
+}
+function subtract() {
+var op1 = document.getElementById("box1").value;
+var op2 = document.getElementById("box2").value;
+var numop1 = Number(op1);
+var numop2 = Number(op2);
+
+var total1 = numop1 - numop2;
+document.getElementById("total").innerHTML=total1;
+}
+function multiply() {
+var op1 = document.getElementById("box1").value;
+var op2 = document.getElementById("box2").value;
+var numop1 = Number(op1);
+var numop2 = Number(op2);
+
+var total1 = numop1 * numop2;
+document.getElementById("total").innerHTML=total1;
+}
+function divide() {
+var op1 = document.getElementById("box1").value;
+var op2 = document.getElementById("box2").value;
+var numop1 = Number(op1);
+var numop2 = Number(op2);
+if (numop2 == 0){
+alert("stop dividing by zero");}
+else {
+var total1 = numop1 / numop2;
+document.getElementById("total").innerHTML=total1;
+}
+}
+function clear2() {
+document.getElementById("box1").value= 0;
+document.getElementById("box2").value= 0;
+document.getElementById("total").innerHTML= 0;
+}
+</script>
+</head>
+<body>
+<input type="text" id="box1" value=0> </input>
+<input type="text" id="box2" value=0> </input>
+<button type="button" id="+" onclick="add()">add </button>
+<button type="button" id="-" onclick="subtract()">subtract</button>
+<button type="button" id="*" onclick="multiply()">multiply</button>
+<button type="button" id="/" onclick="divide()">divide </button>
+<button type="button" id="clear" onclick="clear2()">clear </button>
+<h1 id="total"> do some math </h1>
+</body>
+</html>
+<!--
+A dom element is an html element that is accessible by javascript
+document.getElementById finds the html element with the specified id
+innerHTML modiefies the content of a HTML element
+a scope is the set of variables objects and functions you have access top
+if-else-else if work so if the if set is true it executes the code inside the if and if the value is not true it executes the else and the else if is a second or third etc if statement that will be executed if true
+string variables are inside single or double quotes and are text number variables are not in quotes and are numbers boolean variables are only true or false and are not in quotes
+the number fution converts the object to its corresponding number
+nan represents not a number infinty is displayed when numbers exceed the upper limit and -infinty is displayed when numbers exceed the lower limit
+can get text from text box using document.getElementById("").value
+
+
+-->
